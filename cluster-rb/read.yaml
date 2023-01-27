@@ -5,7 +5,7 @@ metadata:
 subjects:
   - kind: ServiceAccount
     name: krateo-lab-user
-    apiGroup: rbac.authorization.k8s.io
+    namespace: emphasis
 roleRef:
   kind: ClusterRole
   name: workspaces-reader

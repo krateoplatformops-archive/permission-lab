@@ -8,15 +8,15 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      component: api
+      component: permission-lab
   template:
     metadata:
       labels:
-        component: api
+        component: permission-lab
     spec:
       serviceAccountName: krateo-lab-user
       containers:
-        - name: api
+        - name: permission-lab
           image: ghcr.io/krateoplatformops/permission-lab:0.1.0
           imagePullPolicy: IfNotPresent
           resources:

@@ -1,0 +1,18 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: permission-lab-ingress
+  annotations:
+    kubernetes.io/ingress.class: kong
+spec:
+  rules:
+    - host: permission-lab.krateo.site
+      http:
+        paths:
+          - backend:
+              service:
+                name: permission-lab-svc
+                port:
+                  number: 80
+            path: /
+            pathType: Prefix
