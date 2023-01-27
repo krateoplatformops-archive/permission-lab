@@ -14,10 +14,10 @@ spec:
       labels:
         component: api
     spec:
-      serviceAccountName: pipem-sa
+      serviceAccountName: krateo-lab-user
       containers:
         - name: api
-          image: ghcr.io/krateoplatformops/permission-lab:latest
+          image: ghcr.io/krateoplatformops/permission-lab:0.1.0
           imagePullPolicy: IfNotPresent
           resources:
             requests:
