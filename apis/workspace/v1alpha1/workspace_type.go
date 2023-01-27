@@ -19,7 +19,7 @@ type WorkspaceSpec struct {
 // +kubebuilder:object:root=true
 
 // A Workspace is a Krateo workspace API type.
-// +kubebuilder:resource:scope=Cluster,categories={managed,krateo,workspaces}
+// +kubebuilder:resource:categories={managed,krateo,workspaces}
 type Workspace struct {
 	metav1.TypeMeta   `json:",inline"`
 	metav1.ObjectMeta `json:"metadata,omitempty"`

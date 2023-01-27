@@ -17,7 +17,7 @@ spec:
     listKind: WorkspaceList
     plural: workspaces
     singular: workspace
-  scope: Cluster
+  scope: Namespaced
   versions:
   - name: v1alpha1
     schema:
