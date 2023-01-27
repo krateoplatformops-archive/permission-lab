@@ -1,0 +1,7 @@
+apiVersion: krateo.io/v1alpha1
+kind: Workspace
+metadata:
+  name: workspace-2
+spec:
+  name: workspace-2
+  description: "Workspace 2"

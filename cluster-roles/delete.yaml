@@ -1,0 +1,8 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: workspaces-deleter
+rules:
+  - apiGroups: ["krateo.io"]
+    resources: ["workspaces"]
+    verbs: ["delete"]

@@ -1,0 +1,16 @@
+/node_modules
+/build
+.git
+*.md
+.gitignore
+nodemon.json
+.dccache
+nodemon.json
+*.go
+apis/**
+chart/**
+cluster-rb/**
+cluster-roles/**
+hack/**
+sa/**
+workspaces/**
