@@ -18,7 +18,7 @@ spec:
       serviceAccountName: krateo-lab-user
       containers:
         - name: permission-lab
-          image: ghcr.io/krateoplatformops/permission-lab:0.2.0
+          image: ghcr.io/krateoplatformops/permission-lab:0.3.0
           imagePullPolicy: IfNotPresent
           resources:
             requests:
