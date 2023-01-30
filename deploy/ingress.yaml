@@ -2,6 +2,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: permission-lab-ingress
+  namespace: organization-1
   annotations:
     kubernetes.io/ingress.class: kong
 spec:

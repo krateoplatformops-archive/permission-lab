@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: permission-lab
+  namespace: organization-1
   labels:
     component: permission-lab
 spec:
@@ -17,7 +18,7 @@ spec:
       serviceAccountName: krateo-lab-user
       containers:
         - name: permission-lab
-          image: ghcr.io/krateoplatformops/permission-lab:0.1.0
+          image: ghcr.io/krateoplatformops/permission-lab:0.2.0
           imagePullPolicy: IfNotPresent
           resources:
             requests:
@@ -43,3 +44,5 @@ spec:
           env:
             - name: PORT
               value: "8080"
+            - name: LOG_LEVEL
+              value: "debug"

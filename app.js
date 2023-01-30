@@ -52,6 +52,39 @@ app.get('/:namespace', async (req, res, next) => {
     })
 })
 
+app.get('/:namespace/:name', async (req, res, next) => {
+  logger.info('GET /')
+
+  const api = `/apis/krateo.io/v1alpha1/namespaces/${req.params.namespace}/workspaces/${req.params.name}`
+  const url = encodeURI(`${kc.getCurrentCluster().server}${api}`)
+
+  await new Promise((resolve, reject) => {
+    request(url, opts, (error, response, data) => {
+      logger.debug(response)
+      if (error || response.statusCode !== 200) {
+        logger.error(error)
+        reject(error)
+      } else resolve(data)
+    })
+  })
+    .then((data) => {
+      logger.debug(data)
+
+      const w = yaml.load(data)
+
+      res.status(200).json({
+        name: w.spec.name,
+        description: w.spec.description
+      })
+    })
+    .catch((error) => {
+      logger.error(error)
+      res
+        .status(500)
+        .json({ message: `Error reading workspace ${req.params.name}` })
+    })
+})
+
 app.post('/:namespace', async (req, res, next) => {
   logger.info('POST /')
 

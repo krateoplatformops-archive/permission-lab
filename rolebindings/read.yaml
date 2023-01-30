@@ -2,11 +2,11 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
   name: read-workspaces
+  namespace: organization-1
 subjects:
   - kind: ServiceAccount
     name: krateo-lab-user
-    namespace: organization-1
 roleRef:
-  kind: ClusterRole
+  kind: Role
   name: workspaces-reader
   apiGroup: rbac.authorization.k8s.io
