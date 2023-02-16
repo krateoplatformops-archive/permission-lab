@@ -20,13 +20,13 @@ app.get('/ping', async (req, res, next) => {
   res.status(200).json({ message: 'permission-lab' })
 })
 
-app.get('/:namespace', async (req, res, next) => {
+app.get('/:namespace', (req, res, next) => {
   logger.info('GET /')
 
   const api = `/apis/krateo.io/v1alpha1/namespaces/${req.params.namespace}/workspaces`
   const url = encodeURI(`${kc.getCurrentCluster().server}${api}`)
 
-  await new Promise((resolve, reject) => {
+  new Promise((resolve, reject) => {
     request(url, opts, (error, response, data) => {
       logger.debug(response)
       if (error || response.statusCode !== 200) {
@@ -52,13 +52,13 @@ app.get('/:namespace', async (req, res, next) => {
     })
 })
 
-app.get('/:namespace/:name', async (req, res, next) => {
+app.get('/:namespace/:name', (req, res, next) => {
   logger.info('GET /')
 
   const api = `/apis/krateo.io/v1alpha1/namespaces/${req.params.namespace}/workspaces/${req.params.name}`
   const url = encodeURI(`${kc.getCurrentCluster().server}${api}`)
 
-  await new Promise((resolve, reject) => {
+  new Promise((resolve, reject) => {
     request(url, opts, (error, response, data) => {
       logger.debug(response)
       if (error || response.statusCode !== 200) {
@@ -85,13 +85,13 @@ app.get('/:namespace/:name', async (req, res, next) => {
     })
 })
 
-app.post('/:namespace', async (req, res, next) => {
+app.post('/:namespace', (req, res, next) => {
   logger.info('POST /')
 
   const api = `/apis/krateo.io/v1alpha1/namespaces/${req.params.namespace}/workspaces`
   const url = encodeURI(`${kc.getCurrentCluster().server}${api}`)
 
-  await new Promise((resolve, reject) => {
+  new Promise((resolve, reject) => {
     request.post(
       url,
       {
@@ -127,13 +127,13 @@ app.post('/:namespace', async (req, res, next) => {
     })
 })
 
-app.patch('/:namespace/:name', async (req, res, next) => {
+app.patch('/:namespace/:name', (req, res, next) => {
   logger.info('PATCH /')
 
   const api = `/apis/krateo.io/v1alpha1/namespaces/${req.params.namespace}/workspaces`
   const url = encodeURI(`${kc.getCurrentCluster().server}${api}`)
 
-  await new Promise((resolve, reject) => {
+  new Promise((resolve, reject) => {
     request.patch(
       url + '/' + req.params.name + '?fieldManager=workspace-manager',
       {
@@ -167,10 +167,10 @@ app.patch('/:namespace/:name', async (req, res, next) => {
     })
 })
 
-app.delete('/:namespace/:name', async (req, res, next) => {
+app.delete('/:namespace/:name', (req, res, next) => {
   logger.info('DELETE /')
 
-  await new Promise((resolve, reject) => {
+  new Promise((resolve, reject) => {
     request.delete(
       url + '/' + req.params.name,
       opts,

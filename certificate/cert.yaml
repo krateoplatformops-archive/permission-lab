@@ -1,0 +1,56 @@
+apiVersion: certificates.k8s.io/v1
+kind: CertificateSigningRequest
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"certificates.k8s.io/v1","kind":"CertificateSigningRequest","metadata":{"annotations":{},"name":"myuser"},"spec":{"expirationSeconds":86400,"request":"LS0tLS1CRUdJTiBDRVJUSUZJQ0FURSBSRVFVRVNULS0tLS0KTUlJQ1ZqQ0NBVDRDQVFBd0VURVBNQTBHQTFVRUF3d0dZVzVuWld4aE1JSUJJakFOQmdrcWhraUc5dzBCQVFFRgpBQU9DQVE4QU1JSUJDZ0tDQVFFQTByczhJTHRHdTYxakx2dHhWTTJSVlRWMDNHWlJTWWw0dWluVWo4RElaWjBOCnR2MUZtRVFSd3VoaUZsOFEzcWl0Qm0wMUFSMkNJVXBGd2ZzSjZ4MXF3ckJzVkhZbGlBNVhwRVpZM3ExcGswSDQKM3Z3aGJlK1o2MVNrVHF5SVBYUUwrTWM5T1Nsbm0xb0R2N0NtSkZNMUlMRVI3QTVGZnZKOEdFRjJ6dHBoaUlFMwpub1dtdHNZb3JuT2wzc2lHQ2ZGZzR4Zmd4eW8ybmlneFNVekl1bXNnVm9PM2ttT0x1RVF6cXpkakJ3TFJXbWlECklmMXBMWnoyalVnald4UkhCM1gyWnVVV1d1T09PZnpXM01LaE8ybHEvZi9DdS8wYk83c0x0MCt3U2ZMSU91TFcKcW90blZtRmxMMytqTy82WDNDKzBERHk5aUtwbXJjVDBnWGZLemE1dHJRSURBUUFCb0FBd0RRWUpLb1pJaHZjTgpBUUVMQlFBRGdnRUJBR05WdmVIOGR4ZzNvK21VeVRkbmFjVmQ1N24zSkExdnZEU1JWREkyQTZ1eXN3ZFp1L1BVCkkwZXpZWFV0RVNnSk1IRmQycVVNMjNuNVJsSXJ3R0xuUXFISUh5VStWWHhsdnZsRnpNOVpEWllSTmU3QlJvYXgKQVlEdUI5STZXT3FYbkFvczFqRmxNUG5NbFpqdU5kSGxpT1BjTU1oNndLaTZzZFhpVStHYTJ2RUVLY01jSVUyRgpvU2djUWdMYTk0aEpacGk3ZnNMdm1OQUxoT045UHdNMGM1dVJVejV4T0dGMUtCbWRSeEgvbUNOS2JKYjFRQm1HCkkwYitEUEdaTktXTU0xMzhIQXdoV0tkNjVoVHdYOWl4V3ZHMkh4TG1WQzg0L1BHT0tWQW9FNkpsYWFHdTlQVmkKdjlOSjVaZlZrcXdCd0hKbzZXdk9xVlA3SVFjZmg3d0drWm89Ci0tLS0tRU5EIENFUlRJRklDQVRFIFJFUVVFU1QtLS0tLQo=","signerName":"kubernetes.io/kube-apiserver-client","usages":["client auth"]}}
+  creationTimestamp: "2023-02-14T13:33:09Z"
+  name: myuser
+  resourceVersion: "101571501"
+  uid: dabd14dc-2f3f-4160-8520-a93fe713d321
+spec:
+  expirationSeconds: 86400
+  extra:
+    principalid:
+    - azuread_user://cce69d93-1bf7-48d7-a96b-4f29b8b51299
+    username:
+    - mauro.sala@kiratech.it
+  groups:
+  - azuread_group://69b64f7f-7ec7-40e0-9713-40ab12dd2274
+  - azuread_group://bbc9e640-f169-47e6-9277-c855acf2032d
+  - azuread_group://d1c37eb1-bbe6-493a-8e69-dc4a7f250d36
+  - azuread_group://add5b6e1-a505-4e70-8f83-87bf5d6f582f
+  - azuread_group://66514375-e6c5-4218-b506-732ae1f70ac7
+  - azuread_group://6d47dd92-d35a-488e-932c-d9798668cfe4
+  - azuread_group://ab2b4fbf-82b1-4b0d-a2cc-2f84e221212d
+  - azuread_group://25a486a4-f955-4f7f-8000-65f068c37115
+  - azuread_group://28e9c8c3-26be-4e65-a2d6-de7e4c2be9cb
+  - azuread_group://37a136e6-54b3-4869-805e-f04a44a2eea3
+  - azuread_group://a0ff3ebc-a54c-4e45-b0a1-f7ab046b8999
+  - azuread_group://7bad362c-9161-4cf8-a9d0-e8768a5bdca1
+  - azuread_group://1b6c61d9-234b-44f0-a6d0-f6bfdaa2f465
+  - azuread_group://167214b6-f71a-4097-b66d-23b70ec9d488
+  - azuread_group://325408a0-f28b-4c1d-9550-6bdf564a64ed
+  - azuread_group://58918325-431f-481b-b730-2be57a4f7b76
+  - azuread_group://1f37a6a9-b39b-4eb7-ae5b-60d07214a83d
+  - azuread_group://2fbb0884-c5aa-481a-a3dc-8c4584bfd696
+  - azuread_group://6e5ebfb8-d1df-46f3-87e6-f7a8dc59ed34
+  - azuread_group://16c0bdc6-4533-4d05-ab7e-d0690b77cd6b
+  - azuread_group://f928f337-8600-4453-98d9-bab2f7238ef8
+  - azuread_group://87582a73-914c-4e96-ab3c-bdeb37ec6d88
+  - azuread_group://68874c7f-9bc2-4b87-8d3f-ba4d160fb4b8
+  - system:authenticated
+  - system:cattle:authenticated
+  request: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURSBSRVFVRVNULS0tLS0KTUlJQ1ZqQ0NBVDRDQVFBd0VURVBNQTBHQTFVRUF3d0dZVzVuWld4aE1JSUJJakFOQmdrcWhraUc5dzBCQVFFRgpBQU9DQVE4QU1JSUJDZ0tDQVFFQTByczhJTHRHdTYxakx2dHhWTTJSVlRWMDNHWlJTWWw0dWluVWo4RElaWjBOCnR2MUZtRVFSd3VoaUZsOFEzcWl0Qm0wMUFSMkNJVXBGd2ZzSjZ4MXF3ckJzVkhZbGlBNVhwRVpZM3ExcGswSDQKM3Z3aGJlK1o2MVNrVHF5SVBYUUwrTWM5T1Nsbm0xb0R2N0NtSkZNMUlMRVI3QTVGZnZKOEdFRjJ6dHBoaUlFMwpub1dtdHNZb3JuT2wzc2lHQ2ZGZzR4Zmd4eW8ybmlneFNVekl1bXNnVm9PM2ttT0x1RVF6cXpkakJ3TFJXbWlECklmMXBMWnoyalVnald4UkhCM1gyWnVVV1d1T09PZnpXM01LaE8ybHEvZi9DdS8wYk83c0x0MCt3U2ZMSU91TFcKcW90blZtRmxMMytqTy82WDNDKzBERHk5aUtwbXJjVDBnWGZLemE1dHJRSURBUUFCb0FBd0RRWUpLb1pJaHZjTgpBUUVMQlFBRGdnRUJBR05WdmVIOGR4ZzNvK21VeVRkbmFjVmQ1N24zSkExdnZEU1JWREkyQTZ1eXN3ZFp1L1BVCkkwZXpZWFV0RVNnSk1IRmQycVVNMjNuNVJsSXJ3R0xuUXFISUh5VStWWHhsdnZsRnpNOVpEWllSTmU3QlJvYXgKQVlEdUI5STZXT3FYbkFvczFqRmxNUG5NbFpqdU5kSGxpT1BjTU1oNndLaTZzZFhpVStHYTJ2RUVLY01jSVUyRgpvU2djUWdMYTk0aEpacGk3ZnNMdm1OQUxoT045UHdNMGM1dVJVejV4T0dGMUtCbWRSeEgvbUNOS2JKYjFRQm1HCkkwYitEUEdaTktXTU0xMzhIQXdoV0tkNjVoVHdYOWl4V3ZHMkh4TG1WQzg0L1BHT0tWQW9FNkpsYWFHdTlQVmkKdjlOSjVaZlZrcXdCd0hKbzZXdk9xVlA3SVFjZmg3d0drWm89Ci0tLS0tRU5EIENFUlRJRklDQVRFIFJFUVVFU1QtLS0tLQo=
+  signerName: kubernetes.io/kube-apiserver-client
+  usages:
+  - client auth
+  username: user-bgw2d
+status:
+  conditions:
+  - lastTransitionTime: "2023-02-14T13:33:35Z"
+    lastUpdateTime: "2023-02-14T13:33:35Z"
+    message: This CSR was approved by kubectl certificate approve.
+    reason: KubectlApprove
+    status: "True"
+    type: Approved
