@@ -15,13 +15,13 @@ spec:
     - client auth
 ```
 
-| k8s version \ Provider | AWS                                                                             | Azure   | Google  | OpenShift | Docker Desktop |
-| ---------------------- | ------------------------------------------------------------------------------- | ------- | ------- | --------- | -------------- |
+| k8s version \ Provider | AWS                                                                             | Azure   | Google  | OpenShift | Docker Desktop | Kind    |
+| ---------------------- | ------------------------------------------------------------------------------- | ------- | ------- | --------- | -------------- | ------- |
 | 1.21                   | spec.signerName: beta.eks.amazonaws.com/app-serving<br><s>expirationSeconds</s> |         |         | -         |                |
 | 1.22                   | spec.signerName: beta.eks.amazonaws.com/app-serving                             |         |         | -         |                |
 | 1.23                   | spec.signerName: beta.eks.amazonaws.com/app-serving                             |         | &check; | -         |                |
 | 1.24                   | spec.signerName: beta.eks.amazonaws.com/app-serving                             | &check; |         | -         |                |
-| 1.25                   |                                                                                 | &check; |         | &check;   | &check;        |
+| 1.25                   |                                                                                 | &check; |         | &check;   | &check;        | &check; |
 | 4.9                    | -                                                                               | -       | -       | &check;   | -              |
 | 4.12                   | -                                                                               | -       | -       | &check;   | -              |
 
