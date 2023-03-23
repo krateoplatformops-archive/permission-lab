@@ -14,6 +14,10 @@ type UserSpec struct {
 	// Description: user description
 	// +optional
 	Description string `json:"description,omitempty"`
+
+	// Description: user groups
+	// +optional
+	Groups []string `json:"groups,omitempty"`
 }
 
 // +kubebuilder:object:root=true

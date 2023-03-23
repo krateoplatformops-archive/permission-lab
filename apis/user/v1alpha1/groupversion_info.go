@@ -1,6 +1,6 @@
 // Package v1alpha1 contains the resources of the provider.
 // +kubebuilder:object:generate=true
-// +groupName=auth.krateo.io
+// +groupName=krateo.io
 // +versionName=v1alpha1
 package v1alpha1
 
@@ -11,7 +11,7 @@ import (
 
 // Package type metadata.
 const (
-	Group   = "auth.krateo.io"
+	Group   = "krateo.io"
 	Version = "v1alpha1"
 )
 
